@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  namespace: api do
+  namespace :api do
     get "/users/me" => "users#profile"
     get "/users/:id" => "users#show"
     post "/users" => "users#create"
