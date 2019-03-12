@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     delete "/users/:id" => "users#destroy"
     
     
-    post "/user_sessions" => "sessions#user_create"
+    post "/sessions" => "sessions#create"
   end
 end
