@@ -25,18 +25,31 @@ class Api::PostsController < ApplicationController
   end
 
   def new
-    
+    # add later
   end
 
   def edit
-
+    # add later
   end
 
   def update
-
+    @post = Post.find_by(id: params[:id])
+    @post.update(
+      name: params[:name]
+    )
+    if @post.save
+      render json: {message: 'Post updated successfully'}, status: :created
+    else
+      render json: {errors: user.errors.full_messages}, status: :bad_request
+    end
   end
 
   def destroy
-
+    @post = Post.find_by(id: params[:id])
+    if @post.destroy
+      render json: {message: 'Post destroyed successfully'}, status: :created
+    else
+      render json: {errors: user.errors.full_messages}, status: :bad_request
+    end
   end
 end
