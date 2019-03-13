@@ -5,6 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+####################################
+
+# NOTE: Please alphabetize.
+
+####################################
+
+posts = Post.create([
+  { post_title: "Understanding React's State with these Top 5 Sources", post_content: "Content here.", post_status: true, comment_status: true },
+  { post_title: "React's Hooks with these Top 3 Resources", post_content: "Content here.", post_status: true, comment_status: true },
+  { post_title: "React's Renderer with these Top 2 Sources", post_content: "Content here.", post_status: true, comment_status: true }
+])
+
 users = User.create(
   [{ first_name: "Tina", middle_name: "", last_name: "Dinh La", email: "tdinhla@gmail.com", password_digest: "password", status: true, is_admin: true, experience: "Coding Bootcamp", career_level: "Entry Level"},
   { first_name: "Marcus", middle_name: "", last_name: "Hamill", email: "marcusehamill@gmail.com", password_digest: "password", status: true, is_admin: true, experience: "Coding Bootcamp", career_level: "Entry Level"},

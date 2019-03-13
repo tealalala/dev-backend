@@ -10,13 +10,17 @@ class Api::PostsController < ApplicationController
 
   def create
     @post = Post.new(
-      post_title: "Post Title Hardcoded",
-      post_content: "Post Content Hardcoded",
+      user_id: params[:user_id],
+      post_title: params[:post_title],
+      post_content: params[:post_content],
       post_status: true,
       comment_status: true
     )
-    @post.save
-    render "show.json.jbuilder"
+    if @post.save
+      render "show.json.jbuilder"
+    else
+      render json: {errors: user.errors.full_messages}, status: :bad_request
+    end
   end
 
   def new
