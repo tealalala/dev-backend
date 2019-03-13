@@ -5,7 +5,8 @@ class Api::PostsController < ApplicationController
   end
 
   def show
-
+    @post = Post.find_by(id: params[:id])
+    render 'show.json.jbuilder'
   end
 
   def create
@@ -24,7 +25,7 @@ class Api::PostsController < ApplicationController
   end
 
   def new
-
+    
   end
 
   def edit

@@ -13,9 +13,9 @@
 ####################################
 
 posts = Post.create([
-  { post_title: "Understanding React's State with these Top 5 Sources", post_content: "Content here.", post_status: true, comment_status: true },
-  { post_title: "React's Hooks with these Top 3 Resources", post_content: "Content here.", post_status: true, comment_status: true },
-  { post_title: "React's Renderer with these Top 2 Sources", post_content: "Content here.", post_status: true, comment_status: true }
+  { user_id: 1, post_title: "Understanding React's State with these Top 5 Sources", post_content: "Content here.", post_status: true, comment_status: true },
+  { user_id: 2, post_title: "React's Hooks with these Top 3 Resources", post_content: "Content here.", post_status: true, comment_status: true },
+  { user_id: 3, post_title: "React's Renderer with these Top 2 Sources", post_content: "Content here.", post_status: true, comment_status: true }
 ])
 
 users = User.create(
