@@ -1,6 +1,6 @@
 class Api::PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.order("id ASC").all
     render "index.json.jbuilder"
   end
 
