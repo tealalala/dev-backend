@@ -18,6 +18,15 @@ posts = Post.create([
   { user_id: 3, post_title: "React's Renderer with these Top 2 Sources", post_content: "Content here.", post_status: true, comment_status: true }
 ])
 
+tags = Tag.create([
+  { name: "React" },
+  { name: "React State" },
+  { name: "React Components" },
+  { name: "React Prop" },
+  { name: "React JSX" },
+  { name: "React State Management" }
+])
+
 users = User.create(
   [{ first_name: "Tina", middle_name: "", last_name: "Dinh La", email: "tdinhla@gmail.com", password_digest: "password", status: true, is_admin: true, experience: "Coding Bootcamp", career_level: "Entry Level"},
   { first_name: "Marcus", middle_name: "", last_name: "Hamill", email: "marcusehamill@gmail.com", password_digest: "password", status: true, is_admin: true, experience: "Coding Bootcamp", career_level: "Entry Level"},
