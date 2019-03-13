@@ -1,1 +1,1 @@
-json.partial! 'tag.json.jbuilder', tag: @tag
+json.partial! 'post.json.jbuilder', post: @post

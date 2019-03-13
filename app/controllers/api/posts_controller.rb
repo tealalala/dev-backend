@@ -18,7 +18,7 @@ class Api::PostsController < ApplicationController
       comment_status: true
     )
     if @post.save
-      render "show.json.jbuilder"
+      render json: {message: 'Post created successfully'}, status: :created
     else
       render json: {errors: user.errors.full_messages}, status: :bad_request
     end

@@ -1,3 +1,3 @@
-json.array! @tags do |tag|
-  json.partial! 'tag.json.jbuilder', tag: tag
+json.array! @posts do |post|
+  json.partial! 'post.json.jbuilder', post: post
 end
