@@ -9,7 +9,14 @@ class Api::PostsController < ApplicationController
   end
 
   def create
-
+    @post = Post.new(
+      post_title: "Post Title Hardcoded",
+      post_content: "Post Content Hardcoded",
+      post_status: true,
+      comment_status: true
+    )
+    @post.save
+    render "show.json.jbuilder"
   end
 
   def new
