@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     # Posts
     resources :posts
 
+    # Post Tags
+    resources :post_tags, :only => [:index]
+
     # Users
     get "/users/me" => "users#profile"
     get "/users/:id" => "users#show"
@@ -10,7 +13,7 @@ Rails.application.routes.draw do
     patch "/users/:id" => "users#update"
     delete "/users/:id" => "users#destroy"
 
-    # Tag Posts
+    # Tags
     resources :tags, :only => [:index, :show, :create]
 
     # Sessions
