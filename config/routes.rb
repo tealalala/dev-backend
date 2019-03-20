@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :post_tags, :only => [:index, :create]
 
     # Post User Votes
-    resources :post_user_votes, :only => [:index]
+    resources :post_user_votes, :only => [:index, :create]
 
     # Tags
     resources :tags, :only => [:index, :show, :create]

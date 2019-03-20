@@ -35,7 +35,11 @@ class Api::PostsController < ApplicationController
   def update
     @post = Post.find_by(id: params[:id])
     @post.update(
-      name: params[:name]
+      user_id: params[:user_id],
+      post_title: params[:post_title],
+      post_content: params[:post_content],
+      post_status: true,
+      comment_status: true
     )
     if @post.save
       render json: {message: 'Post updated successfully'}, status: :created
