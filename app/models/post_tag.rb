@@ -4,6 +4,6 @@ class PostTag < ApplicationRecord
   belongs_to :tag
 
   # Active Record Association: posts / JOIN: post_user_votes / users
-  belongs_to :post
+  # belongs_to :post --- already stated above
   belongs_to :user
 end
