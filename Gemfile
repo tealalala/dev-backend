@@ -3,6 +3,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+# Used Awesome_print in Rails Console during Development only
+# in order to see colors with awesome_print in rails dev console all the time, create a .irbrc file in your user directory (/Users/yourcomputername), then add the following code:
+# require "awesome_print"
+# AwesomePrint.irb!
+# Then restart rails dev console and `puts "hi"` to check if it works
+gem 'awesome_print', require: false, group: :development
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1', '>= 5.2.1.1'
 # Use postgresql as the database for Active Record
