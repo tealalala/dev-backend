@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :tags, :only => [:index, :show, :create]
 
     # Users
+    get "/users" => "users#index"
     get "/users/me" => "users#profile"
     get "/users/:id" => "users#show"
     post "/users" => "users#create"
