@@ -10,6 +10,9 @@ ruby '2.5.1'
 # Then restart rails dev console and `puts "hi"` to check if it works
 gem 'awesome_print', require: false, group: :development
 
+# Use Fiagro to create environment variables and easily reference them
+gem "figaro"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1', '>= 5.2.1.1'
 # Use postgresql as the database for Active Record
