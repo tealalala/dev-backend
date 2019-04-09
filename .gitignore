@@ -26,5 +26,5 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-# Ignore environment variable files - contains GitHub client id and client secret
-config/*.yml
+# Ignore application configuration
+/config/application.yml
