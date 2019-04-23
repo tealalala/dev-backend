@@ -3,6 +3,11 @@ class Api::UsersController < ApplicationController
     @users = User.order("id ASC").all
     render "index.json.jbuilder"
   end
+  
+  def profile
+    @user = current_user
+    render "show.json.jbuilder"
+  end
 
   def create
     user = User.new(
