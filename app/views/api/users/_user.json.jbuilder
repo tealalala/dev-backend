@@ -2,6 +2,7 @@ json.id user.id
 json.first_name user.first_name
 json.middle_name user.middle_name
 json.last_name user.last_name
+json.full_name user.full_name
 json.email user.email
 json.status user.status
 json.experience user.experience

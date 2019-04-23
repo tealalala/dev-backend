@@ -5,5 +5,8 @@ class User < ApplicationRecord
   # Active Record Association: posts / JOIN: post_user_votes / users
   has_many :post_user_votes
   has_many :posts, through: :post_user_votes
-
+  def full_name
+    first_name + " " + last_name
+  end  
+  
 end
